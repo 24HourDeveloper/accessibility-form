@@ -1,13 +1,26 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { ThemeProvider, CSSReset, theme } from '@chakra-ui/core'
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
+const customTheme = {
+  ...theme,
+  colors: {
+    ...theme.colors,
+    tyran:'#ff6257',
+    brand: {
+      900: "#ff6257",
+    },
+  },
+};
+
 ReactDOM.render(
-  <React.StrictMode>
+  <ThemeProvider theme={customTheme}>
+    <CSSReset />
     <App />
-  </React.StrictMode>,
+  </ThemeProvider>,
   document.getElementById('root')
 );
 
