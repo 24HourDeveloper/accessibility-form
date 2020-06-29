@@ -13,3 +13,7 @@ input[type=password] {
 .shadow-btn{
   box-shadow: 3px 5px 6px #888888;
 }
+
+fieldset{
+  border-width: 0;
+}
